@@ -9,8 +9,8 @@
 
 
 <script>
-import About from "./About.vue";
-import Slideshow from "./Slideshow.vue"
+import About from "../components/About";
+import Slideshow from "../components/Slideshow";
 export default {
     name: 'home',
     components: {

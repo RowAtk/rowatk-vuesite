@@ -3,6 +3,8 @@
         <img id='logo' alt="Rowatk" src="../assets/branding/logo.png">
         <!-- HELLLOOOOOOOOOO -->
         <h2 id='name'>{{name}}</h2>
+        <h4><a href="mailto: rowaneatkinson@gmail.com">rowaneatkinson@gmail.com</a></h4>
+        <h5><a href="tel: +18763665118"></a>+1(876)-366-5118</h5>
     </div>
 </template>
 
@@ -32,8 +34,14 @@ export default {
     }
 
     #name{
-        padding: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         color: rgb(233, 232, 232);
         /* text-shadow: 0.5px 0.5px #000; */
+    }
+
+    a{
+        color: rgb(0, 0, 0);
+
     }
 </style>

@@ -12,7 +12,8 @@
     "bootstrap-vue": "^2.0.0-rc.16",
     "terser": "^3.14.1",
     "vue": "^2.6.10",
-    "vue-carousel": "^0.18.0"
+    "vue-carousel": "^0.18.0",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",

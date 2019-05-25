@@ -1,5 +1,5 @@
 <template>
-  <div id="main">
+  <div id="">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Sidebar id="sidebar"/>

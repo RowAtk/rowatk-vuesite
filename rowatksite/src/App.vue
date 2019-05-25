@@ -1,21 +1,23 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <Main/>
+    <!-- <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div> -->
+    <Sidebar></Sidebar>
+    <router-view id="content"></router-view>
   </div>
 </template>
 
 <script>
-import Main from "./components/Main.vue"
-
+import Sidebar from "./components/Sidebar"
 export default {
-  name: 'app',
   components: {
-    Main
+    Sidebar
   }
 }
 </script>
+
 
 <style>
   *{
@@ -27,5 +29,14 @@ export default {
   body{
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
+  }
+
+  #app{
+    display: 'inline-block';
+  }
+
+  #content{
+    margin-left: 250px;
+    padding: 20px;
   }
 </style>

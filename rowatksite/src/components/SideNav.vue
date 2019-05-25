@@ -1,8 +1,8 @@
 <template>
     <div id="sidenav">
-        <a class="active" href="#home">Home</a>
+        <a class="active" href="/">Home</a>
         <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+        <a href="#/contact">Contact</a>
         <a href="#about">Socials</a>
     </div>
     
