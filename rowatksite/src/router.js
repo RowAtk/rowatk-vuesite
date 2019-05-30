@@ -23,6 +23,11 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: () => import('./views/Contact.vue')
+    },
+    {
+      path: '/socials',
+      name: 'socials',
+      component: () => import('./views/Socials.vue')
     }
     
   ]

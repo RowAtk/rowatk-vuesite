@@ -1,19 +1,22 @@
 <template>
   <div id="slideshow">
     <div id="prev-slide">
-      <img :src="require('../assets/slides/' + images[pslide].filename)" alt="previous slide">
+      <!-- <img :src="require('../assets/slides/' + images[pslide].filename)" alt="previous slide"> -->
+      <img :src="imagesrc[pslide]" alt="previous slide">
     </div>
 
     <!-- <div class="slidespacer"></div> -->
 
     <div id="current-slide">
-      <img :src="require('../assets/slides/' + images[cslide].filename)" alt="current slide" style="max-height: 300px">
+      <!-- <img :src="require('../assets/slides/' + images[cslide].filename)" alt="current slide" style="max-height: 300px"> -->
+      <img :src="imagesrc[cslide]" alt="current slide">
     </div>
 
     <!-- <div class="slidespacer"></div> -->
 
     <div id="next-slide">
-      <img :src="require('../assets/slides/' + images[nslide].filename)" alt="next slide">
+      <!-- <img :src="require('../assets/slides/' + images[nslide].filename)" alt="next slide"> -->
+      <img :src="imagesrc[nslide]" alt="next slide">
     </div>
 
     <!-- <a class="prev" @click="changeSlide(-1)">&#10094;</a>
@@ -29,19 +32,20 @@ import { setInterval } from 'timers';
     data() {
       return {
         imgHeight: 100,
-        cslide: 0
+        cslide: 0,
+        imagesrc: []
       }
     },
     methods: {
       getSrc: function(name){
-        console.log(this.path + name);
+        // console.log(this.path + name);
         return require(this.path + name);
       },
       changeSlide: function(num){
         if(this.cslide == this.images.length - 1 && num>0){
           this.cslide = 0;
         }else if(this.cslide == 0 && num < 0){
-          this.cslide = this.images.length;
+          this.cslide = this.images.length-1;
         }else{
           this.cslide += num;
         }
@@ -69,6 +73,13 @@ import { setInterval } from 'timers';
       }
     },
     created: function(){
+      for (let i = 0; i < this.images.length; i++) {
+        // this.imagesrc.push(require('../assets/slides/' + this.images[i].filename));
+        import (/* webpackMode: "lazy" */ `../assets/slides/${this.images[i].filename}`).then(image => {
+          this.imagesrc.push(image.default);
+        })
+      }
+      // console.log(this.imagesrc);
       this.autoChange();
     }
   }

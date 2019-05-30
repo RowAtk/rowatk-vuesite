@@ -3,7 +3,7 @@
         <a class="active" href="/">Home</a>
         <a href="#resume">Resume</a>
         <a href="#/contact">Contact</a>
-        <a href="#about">Socials</a>
+        <a href="#/socials">Socials</a>
     </div>
     
 </template>

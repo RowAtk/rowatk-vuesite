@@ -4,7 +4,7 @@
         <!-- HELLLOOOOOOOOOO -->
         <h2 id='name'>{{name}}</h2>
         <h4><a href="mailto: rowaneatkinson@gmail.com">rowaneatkinson@gmail.com</a></h4>
-        <h5><a href="tel: +18763665118"></a>+1(876)-366-5118</h5>
+        <h5><a href="tel:+1-876-366-5118">+1 (876) 366-5118</a></h5>
     </div>
 </template>
 
